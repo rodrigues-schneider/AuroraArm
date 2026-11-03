@@ -1,0 +1,6 @@
+SHA-256 publicado: 3df8bc735485a9308f67e2b54f53737e033c847ea3b65745b894c8b9007d1424
+SHA-256 do arquivo: 3df8bc735485a9308f67e2b54f53737e033c847ea3b65745b894c8b9007d1424
+Integridade: OK
+
+Co-simulação [fmpy + binário da FMU] com H = 4 ms: 89 trocas, velocidade final 448.17 rad/s (alvo 450)
+Maior diferença FMU x cpslab (mesmo H): 1.72e-07 rad/s -> EQUIVALENTE

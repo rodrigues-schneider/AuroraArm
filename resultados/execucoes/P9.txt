@@ -1,0 +1,4 @@
+(a) A = [[-666.6667, -70.8333], [202.381, -0.3571]]
+    polos = -644.4 e -22.62 rad/s | tau_e = 1.552 ms | tau_m = 44.22 ms
+(b) i_ss = 3.735 A (47% de I_max) | V_ss = 41.24 V | folga = 6.762 V
+(c) amostras por tau_m = 22.1

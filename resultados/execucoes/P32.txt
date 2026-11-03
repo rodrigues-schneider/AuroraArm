@@ -1,0 +1,15 @@
+Prazo do watchdog (HAL-006): 2.0 ms = 1.0 ciclos de 2.0 ms
+
+ atraso(ms)   ciclos  comando
+        0.6      0.3  normal
+        1.4      0.7  normal
+        1.9      0.9  normal
+        2.6      1.3  SEGURO (torque 0)
+        4.0        -  SEGURO (alvo já caído)
+
+Depois do estouro o objeto alvo não responde mais (foi derrubado). Para refazer o
+ensaio das células anteriores é preciso criar um alvo novo — isso é de propósito.
+
+Fronteira segurança x disponibilidade: torque zero reduz o risco físico mas interrompe
+a missão. O robô ficou seguro e indisponível. Em fábrica, parar é aceitável; num avião
+em voo, parar significa cair. A escolha vem da análise de perigos, não do watchdog sozinho.

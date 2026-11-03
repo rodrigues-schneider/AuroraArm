@@ -1,0 +1,14 @@
+Controlador a Ts = 2 ms | planta 'FMU' trocando dados a cada H = m*Ts
+  m   H [ms]  trocas  desvio [rad/s]  desvio [%]  desvio/H [%/ms]
+  1        2     178           0.000       0.000           0.0000
+  2        4      89           3.011       0.669           0.1673
+  3        6      60           6.157       1.368           0.2280
+  4        8      45           9.459       2.102           0.2627
+  6       12      30          14.700       3.267           0.2722
+  8       16      23          13.880       3.084           0.1928
+ 12       24      16          23.651       5.256           0.2190
+ 16       32      12          50.277      11.173           0.3491
+O erro cresce com H (quase linear enquanto H é pequeno perto de tau_mec): a planta recebe a mesma tensão do começo ao fim de cada H.
+FMU íntegra               : maior diferença = 0.2077 rad/s
+FMU adulterada (Kt +6%)   : maior diferença = 14.28 rad/s
+Confiar sem conferir é o oposto do Model-Based Design: confira o hash E o comportamento.

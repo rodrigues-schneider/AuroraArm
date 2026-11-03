@@ -1,0 +1,30 @@
+==================================================================
+ p23 · Cobertura: 100% de estados não é 100% de transições
+==================================================================
+Grafo do supervisor: 6 estados, 25 arestas distintas.
+
+Três critérios, em ordem crescente de exigência:
+  1. cobertura de ESTADOS           (visitar cada estado)
+  2. cobertura de TRANSIÇÕES         (percorrer cada aresta origem->destino)
+  3. cobertura de CONDIÇÕES DE GUARDA (exercitar cada combinação que habilita a aresta)
+
+Suíte mínima por percurso do grafo: 5 testes
+  (a árvore geradora da BFS: uma transição que revela cada estado pela 1ª vez)
+              OCIOSO --{partir}--> MOVENDO
+              OCIOSO --{emergencia}--> EMERGENCIA
+              OCIOSO --{falha}--> FALHA
+             MOVENDO --{obstaculo}--> DESACELERANDO
+             MOVENDO --{obstaculo, vel0}--> PARADO_OBSTACULO
+
+  cobertura de estados   : 100%  (5 testes)
+  cobertura de transições: 20.0%  (5 de 25 arestas)
+  cobrir as 25 arestas exigiria no mínimo 25 casos.
+
+Por que 100% de cobertura de LINHA não é evidência de correção: o bug de prioridade
+(p20) convive com 100% de cobertura de linha, porque cada ramo do if roda em algum
+teste isolado — nenhum precisa encadear os DOIS passos exatos que expõem a falha.
+Cobertura de linha mede CÓDIGO EXECUTADO, não COMBINAÇÃO de estados e entradas.
+
+Segurança: relatório de auditoria que só mostra '100% de cobertura' pode esconder
+exatamente a sequência de ataque. Exija o CRITÉRIO (estados? transições? guarda?)
+junto do número — e prefira testes gerados do modelo, não da intuição de quem escreve.

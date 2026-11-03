@@ -1,0 +1,16 @@
+/home/schneider/.config/matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /tmp/matplotlib-0o_hi_3h because there was an issue with the default path (/home/schneider/.config/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+1) Ações do controlador (alvo w_op, sem carga)
+   só P  Kp=0.1728    Ki=0         erro=  52.957%  sobressinal=  0.00%
+   só I  Kp=0         Ki=3.908     erro=   0.456%  sobressinal= 11.00%
+   PI    Kp=0.1728    Ki=3.908     erro=   0.004%  sobressinal=  0.00%
+
+2) Windup | alvo 333.29 rad/s | Kp=0.5185 Ki=46.9 | V_max=48 V
+ Kaw*Ts  Kaw [1/s]  sobressinal [%]  ciclos no teto  acomodação [ms]
+      0          0            44.42              45            130.0
+   0.05         25            25.01              30             84.0
+    0.1         50            14.62              25             74.0
+   0.25        125             3.66              19             62.0
+    0.5        250             1.84              17             44.0
+      1        500             1.65              16             44.0
+O problema que aparece DEPOIS do teto foi acumulado DURANTE o teto.

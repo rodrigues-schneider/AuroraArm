@@ -1,0 +1,26 @@
+==================================================================
+ p22 · Watchdog do Junta do cotovelo AuroraArm  (cenário AuroraArm)
+==================================================================
+Ts = 2 ms | prazo REQ-SAFE-006 = 100 ms (50 períodos) | 1 ciclo(s) de atuação podem se perder
+
+Projeto atual (atraso_deteccao_max = 10 períodos = 20 ms):
+  o ambiente tem 22 trajetórias não determinísticas (2·10+2)
+  PIOR CASO = 13 períodos = 26 ms  ->  folga de 74 ms (CONFORME)
+
+Varredura do atraso de detecção (pior caso cresce 1 período por passo):
+   atraso_max  pior (per)  pior (ms)  caminhos  status
+           10          13        26        22  ok
+           46          49        98        94  ok
+           47          50       100        96  ok
+           48          51       102        98  VIOLA
+
+FRONTEIRA EXATA: até atraso_max = 47 (100 ms) o prazo é cumprido;
+a partir de 48 (102 ms) é violado. Isso transforma '100 ms' de
+número no papel em restrição de projeto verificada sobre o filtro do sensor.
+
+[ok] tabela completa salva em figs/varredura_u03.txt
+
+Segurança: 'nunca ultrapassou o prazo em teste' fala do caso típico. O pior caso
+exige o atraso máximo E o ciclo perdido ao mesmo tempo — combinação rara por
+construção. Um atacante que force jitter (DoS no RTOS) empurra o sistema justo
+para esse pior caso que a bancada quase nunca amostra.

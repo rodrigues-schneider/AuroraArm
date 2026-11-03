@@ -1,0 +1,13 @@
+HIL Controlador da junta do cotovelo AuroraArm · Ts=2.0 ms · ref=450.0 rad/s
+  controle convergiu? sim (w final = 450.0 rad/s)
+
+Temporização medida (400 ciclos):
+  período nominal : 2.000 ms
+  período médio   : 2.232 ms   (jitter médio 0.232 ms)
+  PIOR caso       : 3.963 ms   (jitter de pior caso 1.963 ms)
+  desvio padrão   : 0.422 ms
+
+Se o período MÉDIO ficasse muito acima do nominal, não seria jitter: seria o laço não
+cabendo no período (problema de projeto). Aqui o médio fica perto do nominal — é jitter.
+
+[ok] durações salvas em figs/jitter_u04.txt (histograma para o relatório).

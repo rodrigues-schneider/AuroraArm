@@ -1,0 +1,10 @@
+Kp = 0.7642 V/(rad/s) | Ts = 2 ms
+atraso 0 amostra(s) =     0 ms | raio  0.612 | estável
+atraso 1 amostra(s) =     2 ms | raio  0.817 | estável
+atraso 2 amostra(s) =     4 ms | raio  0.934 | estável
+atraso 3 amostra(s) =     6 ms | raio  0.992 | estável
+atraso 4 amostra(s) =     8 ms | raio  1.022 | INSTÁVEL
+atraso 5 amostra(s) =    10 ms | raio  1.039 | INSTÁVEL
+atraso 6 amostra(s) =    12 ms | raio  1.048 | INSTÁVEL
+atraso 7 amostra(s) =    14 ms | raio  1.053 | INSTÁVEL
+atraso 8 amostra(s) =    16 ms | raio  1.056 | INSTÁVEL

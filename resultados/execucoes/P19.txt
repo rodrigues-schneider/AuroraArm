@@ -1,0 +1,25 @@
+==================================================================
+ p19 · Exploração exaustiva do supervisor (sistema de transições)
+==================================================================
+estados alcançáveis : 6   ['OCIOSO', 'MOVENDO', 'DESACELERANDO', 'PARADO_OBSTACULO', 'EMERGENCIA', 'FALHA']
+transições exploradas: 768  = 6 estados x 128 entradas
+arestas distintas   : 25 de 36 pares possíveis (6x6)
+
+REQ-SAFE-001 (torque x obstáculo): 0 violações  ->  SATISFEITO
+REQ-SAFE-002 (torque em EMERGENCIA): 0 violações  ->  SATISFEITO
+
+Matriz de arestas (• = existe transição direta):
+             OCIO  MOVE  DESA  PARA  EMER  FALH
+     OCIOSO   •     •     ·     ·     •     •  
+    MOVENDO   •     •     •     •     •     •  
+DESACELERANDO   •     •     •     •     •     •  
+PARADO_OBSTACULO   •     •     ·     •     •     •  
+ EMERGENCIA   ·     ·     ·     ·     •     ·  
+      FALHA   •     ·     ·     ·     •     •  
+
+Pares SEM transição direta: 11 (ex.: OCIOSO->DESACELERANDO nunca acontece —
+o robô sempre passa por MOVENDO antes de desacelerar).
+
+Segurança: a BFS é exaustiva. Um atacante que confie em 'nunca vi falhar em
+teste' aposta que a combinação ruim não foi amostrada. O verificador aplica TODAS
+as 128 entradas a cada estado — a combinação que falha não tem como escapar.

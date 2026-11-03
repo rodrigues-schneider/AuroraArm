@@ -1,0 +1,22 @@
+==================================================================
+ p20 · O contraexemplo de duas transições
+==================================================================
+Mesmos estados e mesmas transições nas duas versões:
+  correto: 6 estados, 768 transições, 0 violações de REQ-SAFE-001
+  com bug: 6 estados, 768 transições, 8 violações de REQ-SAFE-001  <-- o bug muda SÓ o resultado
+
+Contraexemplo mínimo (2 transições):
+   OCIOSO --{partir}--> MOVENDO
+   MOVENDO --{partir, obstaculo}--> MOVENDO
+
+   Na transição final o supervisor fica em MOVENDO com torque habilitado
+   E obstáculo presente ao mesmo tempo — exatamente o que REQ-SAFE-001 proíbe.
+
+A correção cabe em uma ideia: avaliar o obstáculo ANTES do comando de partida.
+Em um supervisor de segurança, a condição que protege pessoas precede a que
+atende conveniência de operação. Ordem de avaliação, em máquina de estados, é
+SEMÂNTICA — não é estilo.
+
+Segurança: nenhum teste manual comum aplica 'comando de partida' E 'obstáculo'
+ao mesmo tempo. Um atacante que conheça a inversão de prioridade sabe exatamente
+qual par de entradas segurar para manter o torque ligado diante de uma pessoa.

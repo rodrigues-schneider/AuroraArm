@@ -1,0 +1,12 @@
+tau_mec = 44.22 ms | regra de bolso (10 a 20 amostras): Ts entre 2.211 e 4.422 ms
+  Ts [ms]   fs [Hz]  amostras/tau  margem [graus]  estado
+    1.105     904.6          40.0            74.1  estável
+    2.211     452.3          20.0            69.9  estável
+    4.422     226.2          10.0            61.5  estável
+    8.844     113.1           5.0            44.7  estável
+   14.739      67.8           3.0            22.2  estável
+   22.109      45.2           2.0            -5.8  oscilando
+
+Ts crítico (malha discreta fica instável): 17.55 ms
+Margem de fase no Ts da planta (2 ms): 70.73 graus
+Por que Ts/2? O comando calculado em k*Ts fica congelado até (k+1)*Ts: chega, em média, meio período atrasado.

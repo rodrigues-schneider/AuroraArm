@@ -1,0 +1,14 @@
+==================================================================
+ p25 · Memorial item (d) · Junta do cotovelo AuroraArm (cenário AuroraArm)
+==================================================================
+Dados: Ts = 2 ms | prazo = 100 ms | atraso_deteccao_max = 10 períodos | ciclos_perdidos = 1
+
+Conferência contra a exploração exaustiva do autômato temporizado:
+  [✔] pior caso (períodos): 13 períodos
+  [✔] pior caso (ms): 26 ms
+  [✔] fronteira (atraso_max): 47 períodos
+
+  22 trajetórias exploradas; pior caso CUMPRE o prazo (folga 74 ms).
+
+[ok] Tudo conferido. Rascunho salvo em figs/memorial_d_u03.md
+     Leve-o para o repositório do trabalho (memorial item d).

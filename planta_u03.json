@@ -1,0 +1,14 @@
+{
+  "codigo": "AuroraArm",
+  "linha": "robotica_colaborativa",
+  "nome": "Junta do cotovelo AuroraArm",
+  "composicao": "AuroraArm de 6 GDL; junta do cotovelo com motor CC 48 V e redutor harmônico 100:1",
+  "Ts_ms": 2,
+  "prazo_ms": 100,
+  "atraso_projeto": 10,
+  "ciclos_perdidos": 1,
+  "n_zonas": 0,
+  "atraso_sensor_ms": 20,
+  "origem": "AuroraArm.json e Diretrizes_do_TRABALHO.pdf",
+  "observacao_modelagem": "O atraso de detecção de até 20 ms corresponde a 10 períodos de 2 ms. Considera-se a perda de no máximo um ciclo de controle por jitter. n_zonas=0 indica que não foram acrescentados autômatos de zonas independentes, pois o enunciado não especifica sua quantidade."
+}

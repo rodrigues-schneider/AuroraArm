@@ -1,0 +1,13 @@
+/home/schneider/.config/matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /tmp/matplotlib-x0oaet8w because there was an issue with the default path (/home/schneider/.config/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+<TransferFunction>: sys[1]
+Inputs (1): ['u[0]']
+Outputs (1): ['y[0]']
+
+         1.687e+05
+  -----------------------
+  s^2 + 667 s + 1.457e+04
+polo elétrico :   -644.409 rad/s  tau =    1.552 ms
+polo mecânico :    -22.615 rad/s  tau =   44.218 ms   (5 tau = 221.1 ms)
+separação     : 28.5 vezes | ganho estático = 11.57 rad/s por V
+margem de ganho: inf | margem de fase: 74.6 graus em 243.7 rad/s

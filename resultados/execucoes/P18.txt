@@ -1,0 +1,44 @@
+======================================================================
+ p18 · Um requisito, três leituras incompatíveis
+======================================================================
+Requisito de ata de reunião: "o robô deve parar rapidamente se houver obstáculo".
+
+  1. Quão rápido?       "rapidamente" não tem número — qualquer atraso satisfaz trivialmente.
+  2. Parar o quê?       o comando de torque (lógico, imediato) ou a velocidade física (sujeita à inércia)?
+  3. A partir de quando? do obstáculo físico, da detecção pelo sensor ou da decisão do supervisor?
+
+As três leituras são defensáveis — e incompatíveis. A solução separa o
+requisito em dois formais: REQ-SAFE-001 (lógico, sem prazo) e REQ-SAFE-006
+(temporizado, com prazo). Verificados por técnicas diferentes.
+
+----------------------------------------------------------------------
+ Os sete REQ-SAFE classificados
+----------------------------------------------------------------------
+ID             TIPO                   VERIFICAÇÃO
+REQ-SAFE-001   invariante             explora_estados
+REQ-SAFE-002   invariante             explora_estados
+REQ-SAFE-003   alcancabilidade        explora_estados
+REQ-SAFE-004   seguranca              explora_estados
+REQ-SAFE-005   vivacidade             explora_estados
+REQ-SAFE-006   temporizado            automato_temporizado
+REQ-SAFE-007   invariante_continuo    fora_do_escopo
+
+  REQ-SAFE-001 (invariante): Nunca habilitar torque com obstáculo presente (restrição instantânea).
+  REQ-SAFE-002 (invariante): Em EMERGENCIA o torque nunca está habilitado.
+  REQ-SAFE-003 (alcancabilidade): É possível alcançar o estado MOVENDO a partir do repouso.
+  REQ-SAFE-004 (seguranca): Toda vez que o botão de emergência ocorre, o estado seguinte é EMERGENCIA.
+  REQ-SAFE-005 (vivacidade): A partir de FALHA sempre existe um caminho de volta a OCIOSO (rearme).
+  REQ-SAFE-006 (temporizado): O torque físico chega a zero em até o prazo, contado do gatilho físico.
+  REQ-SAFE-007 (invariante_continuo): Velocidade linear do efetuador dentro do limite (grandeza contínua).
+----------------------------------------------------------------------
+ Por que REQ-SAFE-007 fica de fora desta unidade
+----------------------------------------------------------------------
+REQ-SAFE-007 (velocidade linear ≤ limite) é invariante sobre uma GRANDEZA
+CONTÍNUA. O supervisor trata velocidade só de forma binária (vel0), sem o valor
+contínuo no vetor de estados. Verificá-lo exige rodar planta + controlador +
+supervisor juntos (Unidade 4). Por honestidade técnica, ele continua marcado
+como LACUNA rastreada — não um descuido.
+
+Dica de segurança: um requisito formal é aquele em que dois leitores, aplicando
+o mesmo processo mecânico, chegam SEMPRE à mesma conclusão. Ambiguidade em
+requisito de segurança é superfície de ataque: cada leitura vira um comportamento.

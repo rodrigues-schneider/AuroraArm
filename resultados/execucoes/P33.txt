@@ -1,0 +1,35 @@
+Matriz de rastreabilidade — 45 arquivos varridos, 13 com marcador de requisito
+
+REQ              modelo  código  teste  descrição
+REQ-CODE-001          2       0      1  O código embarcado é gerado a partir d
+REQ-CODE-002          2       0      1  O passo do controlador é equivalente a
+REQ-SAFE-006          4       0      3  O torque chega a zero dentro do prazo,
+REQ-SAFE-001          3       0      6  Nunca habilitar torque com obstáculo p
+REQ-CODE-003          2       0      1  Cada artefato gerado carrega assinatur
+
+== O que este pipeline PRODUZ ==
+  [x] Modelo executável da planta identificado por ensaio (U01).
+  [x] Controlador PID projetado com período de amostragem justificado (U02).
+  [x] Requisitos formais e verificação exaustiva do supervisor (U03).
+  [x] Código C gerado do modelo, com assinatura de rastreabilidade (U04/a13).
+  [x] Comparação numérica modelo x código (SIL), erro medido em épsilons (U04/a14).
+  [x] Medição de jitter e prazo de pior caso em tempo real (HIL) (U04/a15).
+  [x] Watchdog com comando seguro demonstrado em falha do alvo (U04/a15).
+  [x] Matriz de rastreabilidade derivada do código (U04/a16).
+  [x] Análise do que o pipeline prova e do que não prova (U04/a16).
+
+== O que este pipeline NÃO produz ==
+  [ ] Qualificação das ferramentas segundo a DO-330.
+  [ ] Cobertura estrutural MC/DC do código (houve só cobertura de transição do modelo).
+  [ ] Análise estática do código-fonte segundo regras MISRA C.
+  [ ] Certificação por autoridade — evidência não é certificado.
+  [ ] Ensaio físico no robô real — HIL usa planta simulada.
+
+== Qualificação de ferramenta (DO-330: 3 perguntas, nenhuma sobre preço/licença) ==
+  Gerador de código C        introduz erro? sim · deixa pular verificação? não · -> EXIGE qualificação
+  Model checker (U03)        introduz erro? não · deixa pular verificação? sim · -> EXIGE qualificação
+  Gerador de testes (MBT)    introduz erro? não · deixa pular verificação? sim · -> EXIGE qualificação
+  Compilador C (gcc -O2)     introduz erro? sim · deixa pular verificação? não · -> EXIGE qualificação
+  Biblioteca de gráficos     introduz erro? não · deixa pular verificação? não · -> dispensa
+
+[ok] figs/memorial_e_u04_AuroraArm.md salvo — rascunho do item (e) do memorial.

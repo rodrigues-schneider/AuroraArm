@@ -1,0 +1,14 @@
+Controlador do Controlador da junta do cotovelo AuroraArm (cenário AuroraArm)
+  arquivos gerados: figs/pid_gen.h, figs/pid_gen.c
+  ganhos no código: {'Kp': 0.2592, 'Ki': 11.73, 'Kd': 0.0, 'Kaw': 250.0}
+  período (contrato): Ts = 2.0 ms
+  assinatura: 13c498799ed6a3ada5d4d72e75364ed32d507b9cfc9dd436d4881e3cf2c85815
+
+Gerar duas vezes com os mesmos parâmetros:
+  1a: 13c498799ed6a3ada5d4d72e ...
+  2a: 13c498799ed6a3ada5d4d72e ...  (idênticas => determinístico)
+
+Mudando Kp de 0.2592 para 0.26 (3a casa):
+  antiga : 13c498799ed6a3ada5d4d72e ...
+  nova   : f1860612ec979844cfc6e94b ...
+  caracteres iguais entre as duas: 4/64  (muda quase tudo — é por isso que compara por IGUAL)

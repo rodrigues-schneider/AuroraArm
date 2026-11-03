@@ -1,0 +1,28 @@
+==================================================================
+ p21 · LTL / CTL: alcançabilidade e vivacidade
+==================================================================
+LTL (trajetória):  G globalmente | F eventualmente | X próximo | U até
+CTL (árvore)    : AG p/todo-sempre | EF existe-eventual | AF p/todo-eventual | EG existe-sempre
+
+No vocabulário do supervisor:
+  REQ-SAFE-001  ->  AG ¬(torque_habilitado ∧ obstaculo)   (invariante)
+  REQ-SAFE-003  ->  EF (estado = MOVENDO)                  (alcançabilidade)
+  REQ-SAFE-005  ->  a partir de FALHA, EF(estado = OCIOSO)  (vivacidade: sempre dá para rearmar)
+
+EF(MOVENDO): alcançável a partir de 5 estados -> ['DESACELERANDO', 'FALHA', 'MOVENDO', 'OCIOSO', 'PARADO_OBSTACULO']
+  (a partir de EMERGENCIA, absorvente, não se alcança MOVENDO — e está correto.)
+
+EMERGENCIA é estado seguro ABSORVENTE por projeto (exige reset físico, fora do
+modelo). A vivacidade olha os estados OPERACIONAIS: a partir de FALHA sempre
+deve existir rearme de volta a OCIOSO.
+
+REQ-SAFE-005 no supervisor correto: SATISFEITO (estados operacionais presos: nenhum)
+Com o bug 'sem_rearme'          : VIOLADO (estados operacionais presos: ['FALHA'])
+
+Atenção: com 'sem_rearme', REQ-SAFE-001 (invariante) ainda tem 0 violações.
+Um sistema pode satisfazer todos os invariantes de segurança e mesmo assim
+ficar PRESO para sempre — safety não captura liveness. Por isso precisamos das duas.
+
+Segurança: um ataque de negação de serviço pode não violar nenhum invariante e
+ainda assim 'prender' o sistema num estado degradado do qual ele nunca sai.
+Vivacidade é a propriedade que flagra esse tipo de travamento.

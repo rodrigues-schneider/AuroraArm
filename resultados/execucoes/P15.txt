@@ -1,0 +1,22 @@
+
+Degrau de V_max/2 discretizado com Ts = 2 ms (desvio máximo contra o ZOH exato)
+   ZOH (exato)      desvio = 0.000 %
+   Tustin           desvio = 0.216 %
+   Euler p/ trás    desvio = 0.848 %
+   Euler p/ frente  desvio = 1.953 %
+
+Degrau de V_max/2 discretizado com Ts = 4.422 ms (desvio máximo contra o ZOH exato)
+   ZOH (exato)      desvio = 0.000 %
+   Tustin           desvio = 0.842 %
+   Euler p/ trás    desvio = 1.835 %
+   Euler p/ frente  desvio = EXPLODIU
+
+Euler para frente só é estável se |1 + lambda*Ts| < 1 para TODOS os polos.
+Polo elétrico = -644.4 rad/s -> Ts limite = 2/|lambda| = 3.104 ms
+
+Aliasing com fs = 500 Hz (Nyquist = 250 Hz):
+   sinal de   150.00 Hz -> controlador enxerga   150.00 Hz
+   sinal de   450.00 Hz -> controlador enxerga    50.00 Hz
+   sinal de   575.00 Hz -> controlador enxerga    75.00 Hz
+   sinal de  1200.00 Hz -> controlador enxerga   200.00 Hz
+Acima de fs/2 a informação já se perdeu na amostra: só um filtro ANALÓGICO antes do conversor resolve.

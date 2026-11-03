@@ -1,0 +1,18 @@
+==================================================================
+ p24 · Teste baseado em propriedades (Hypothesis) + redução
+==================================================================
+Supervisor CORRETO: 2000 sequências geradas, NENHUMA viola REQ-SAFE-001. ✔
+
+Supervisor com BUG: Hypothesis encontrou 22 sequências falhas.
+  menor sequência reproduzida: [1, 5]  (2 passos)
+  traduzida:
+              OCIOSO --{partir}--> MOVENDO
+             MOVENDO --{partir, obstaculo}--> MOVENDO
+
+Exploração exaustiva (p20) achou o contraexemplo mínimo em 2 passos.
+Duas técnicas diferentes — property-based (dirigido por heurística) e exploração
+exaustiva — convergem para a MESMA sequência mínima, porque ela é, estruturalmente,
+o menor caminho que viola o requisito.
+
+Segurança: o shrinking entrega o relatório de incidente pronto — a menor receita
+que reproduz a falha. É o que você quer em mãos antes que um atacante a descubra.

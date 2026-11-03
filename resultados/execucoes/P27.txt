@@ -1,0 +1,21 @@
+Formato Q16.16  (32 bits)
+  menor degrau representável : 1.526e-05
+  faixa                      : [-32768, 32768]
+
+Acumulador: 2000 ciclos somando erro 0.001 por ciclo
+  float : 0.046920
+  Q16.16: 0.061035
+  desvio: 1.412e-02 = 925.1 degraus de quantização
+
+--- modo de falha 1: incremento vira zero ---
+  erro/ciclo=0.001000 -> incremento em Q = 2
+  erro/ciclo=0.000020 -> incremento em Q = 0   <-- VIROU ZERO: integral congela!
+
+--- modo de falha 2: precisão x faixa ---
+  Q8.24: degrau=5.96e-08  faixa=±128
+  Q16.16: degrau=1.53e-05  faixa=±32768
+  Q24.8: degrau=3.91e-03  faixa=±8388608
+
+--- modo de falha 3: estouro de 32 bits ---
+  guardar 29491.2: cabe
+  guardar 49152.0: NAO CABE -> resultado vira lixo no atuador

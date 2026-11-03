@@ -1,0 +1,9 @@
+G0 = 11.572 rad/s por V | queda por carga q = 108.92 rad/s por N.m | r = 450 rad/s, T = 0.25 N.m
+ Kp*G0          Kp  erro previsto  erro simulado  oscilação
+     1     0.08641        238.615        238.614    0.00983
+     2      0.1728        159.076        159.076   0.000155
+     4      0.3456         95.446         95.446   1.61e-09
+     8      0.6913         53.025         53.025          0
+    16       1.383         28.072         28.072   1.48e-11
+Dobrar Kp corta o erro quase pela metade, mas ele NUNCA zera: o P precisa de erro para gerar tensão.
+Quando cálculo e simulação independentes concordam, temos evidência de que entendemos o modelo.

@@ -1,0 +1,8 @@
+Fator de adulteração: 1.15 | avaliações: 8
+R   verdadeiro         0.8 | identificado      0.8009 | erro    0.11%
+L   verdadeiro      0.0012 | identificado      0.0012 | erro    0.04%
+Kt  verdadeiro       0.085 | identificado      0.0739 | erro  -13.05%
+J   verdadeiro     0.00042 | identificado   0.0003171 | erro  -24.50%
+B   verdadeiro     0.00015 | identificado   0.0001145 | erro  -23.69%
+fit no próprio ensaio: 99.79% | fit no ensaio RETIDO: 46.97%
+VEREDITO: MODELO REPROVADO - investigue os dados!

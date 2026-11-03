@@ -1,0 +1,20 @@
+/home/schneider/.config/matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /tmp/matplotlib-hzjugrz0 because there was an issue with the default path (/home/schneider/.config/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+posto ctrb = 2/2 | posto obsv (só velocidade) = 2/2
+com Kt = 0: ctrb 1/2 | obsv 1/2
+
+Ir de 0 a 450 rad/s com polo duplo p (limite do driver: 48 V)
+p =    -22.62 ( 1x o polo mecânico) | u(0) =     1.36 V | cabe
+p =    -45.23 ( 2x o polo mecânico) | u(0) =     5.46 V | cabe
+p =    -67.85 ( 3x o polo mecânico) | u(0) =    12.28 V | cabe
+p =    -90.46 ( 4x o polo mecânico) | u(0) =    21.83 V | cabe
+p =   -113.08 ( 5x o polo mecânico) | u(0) =    34.12 V | cabe
+p =   -135.69 ( 6x o polo mecânico) | u(0) =    49.13 V | SATURA
+p =   -158.31 ( 7x o polo mecânico) | u(0) =    66.87 V | SATURA
+p =   -180.92 ( 8x o polo mecânico) | u(0) =    87.34 V | SATURA
+p =   -203.54 ( 9x o polo mecânico) | u(0) =   110.54 V | SATURA
+p =   -226.15 (10x o polo mecânico) | u(0) =   136.47 V | SATURA
+p =   -248.77 (11x o polo mecânico) | u(0) =   165.12 V | SATURA
+p =   -271.38 (12x o polo mecânico) | u(0) =   196.51 V | SATURA
+p =   -294.00 (13x o polo mecânico) | u(0) =   230.63 V | SATURA
+p =   -316.61 (14x o polo mecânico) | u(0) =   267.47 V | SATURA

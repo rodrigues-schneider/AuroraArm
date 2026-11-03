@@ -1,0 +1,9 @@
+Referência: Kaw=250.0   ·   Código 'gerado': Kaw=0 (anti-windup desligado)
+
+  código CORRETO vs modelo : erro 0.000e+00 V  -> EXATO (bit a bit idêntico)
+  código COM BUG vs modelo : erro 96.000 V  -> DIVERGÊNCIA GROSSEIRA (há um bug de verdade)
+  o bug se separa na amostra 800 (quando o comando satura e a integral 'enrola').
+  teto do driver = 48.0 V  ->  o erro de 96 V passa MUITO do teto.
+
+Lição: compilar sem aviso não é evidência de equivalência. A comparação numérica
+é o teste que reprova um bug que a revisão humana aprovaria.

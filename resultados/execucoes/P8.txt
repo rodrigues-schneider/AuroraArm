@@ -1,0 +1,4 @@
+/home/schneider/.config/matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /tmp/matplotlib-g7446mlq because there was an issue with the default path (/home/schneider/.config/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+ataque em t = 176.9 ms | mudança de tensão em t = 265.3 ms | limiar 0.80 A
+ALARME em t = 267.8 ms

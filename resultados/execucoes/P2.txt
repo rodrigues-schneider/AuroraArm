@@ -1,0 +1,9 @@
+/home/schneider/.config/matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /tmp/matplotlib-b5p9571b because there was an issue with the default path (/home/schneider/.config/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+Referência: 450 rad/s | comando calculado: 38.885 V
+antes da carga        :    449.98 rad/s
+com carga (0.25 N.m) :    422.77 rad/s  (queda 6.1%)
+carga + ataque        :    377.77 rad/s  (queda 16.1%)
+regime teórico com carga  :    422.77 rad/s  (w_op - T*R/(R*B + Kt*Ke))
+regime teórico com ataque :    377.77 rad/s
+O controlador percebeu? NÃO: em malha aberta ninguém mede a saída.

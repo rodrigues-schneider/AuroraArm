@@ -1,0 +1,7 @@
+/home/schneider/.config/matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /tmp/matplotlib-ycbz10lg because there was an issue with the default path (/home/schneider/.config/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+Junta do cotovelo do braço colaborativo AuroraArm | degrau de 24 V
+Velocidade final simulada :     277.03 rad/s
+Regime teórico (G0 x V)   :     277.74 rad/s
+Pico de corrente          :      27.52 A   (limite do driver: 8 A)
+Tempo até 63,2%           :       45.6 ms

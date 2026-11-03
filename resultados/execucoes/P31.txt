@@ -1,0 +1,10 @@
+Pior caso herdado da U03: 13 períodos
+Limite do requisito      : 100.0 ms
+
+  prazo NOMINAL   (todo ciclo = 2.0 ms)        : 26.0 ms  -> folga 74.0 ms
+  prazo PESSIMISTA(todo ciclo = 3.963 ms): 51.5 ms  -> folga 48.5 ms
+
+  VEREDITO (pior caso): PASSA
+
+Nota para o relatório: o cenário supõe que TODOS os ciclos ocorrem no pior tempo já
+observado — o que na prática não acontece. É pessimista por construção; diga isso.

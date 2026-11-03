@@ -1,0 +1,13 @@
+Compilador C: /usr/bin/cc
+Épsilon de máquina (double, 64 bits): 2.220e-16
+
+[C compilado com cc -O2] modelo x código (double):
+  erro máx = 0.000e+00  (0.0 épsilons)
+  veredito : EXATO (bit a bit idêntico)
+  -> em double, a MESMA sequência de operações dá erro exatamente zero; com -O2 o
+     compilador pode reordenar as contas e aparecer uns poucos épsilons. Ambos são equivalentes.
+
+Agora a variante em ponto fixo (o degrau NÃO some na comparação):
+  erro máx = 7.629e-05  = 5 degraus
+  veredito : DIVERGÊNCIA PEQUENA (quantização de ponto fixo; registre no relatório)
+  (fisicamente irrelevante no atuador, mas tem que constar no relatório — a integral acumula.)

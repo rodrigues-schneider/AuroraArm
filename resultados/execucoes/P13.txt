@@ -1,0 +1,9 @@
+Ganho crítico Ku = 5.071 V/(rad/s)  (Ku*G0 = 58.69) | Pu = 8.23 ms = 4.12 amostras
+Na planta contínua esse limite não existe: quem cria o Ku é a amostragem (atraso de Ts/2).
+ZN P   Kp=2.536     Ki=0         Kd=0         erro= 82.655%  sobressinal=  0.00%
+ZN PI  Kp=2.282     Ki=332.7     Kd=0         erro=  0.000%  sobressinal=  0.10%
+ZN PID Kp=3.043     Ki=739.4     Kd=0.00313   erro= -0.000%  sobressinal=  0.78%
+manual Kp=0.1728    Ki=7.817                  erro=  0.002%  sobressinal=  1.89%
+termo D puro    : desvio-padrão em regime = 3.421 V
+termo D filtrado: desvio-padrão em regime = 0.9421 V  (Tf = 4 ms)
+O derivativo puro transforma ruído do sensor em picos de tensão; o filtro reduz esses picos.

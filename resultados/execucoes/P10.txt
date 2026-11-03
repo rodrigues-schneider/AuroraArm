@@ -1,0 +1,9 @@
+/home/schneider/.config/matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /tmp/matplotlib-e7n0ivso because there was an issue with the default path (/home/schneider/.config/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+Junta do cotovelo do braço colaborativo AuroraArm | alvo 450 rad/s | carga 0.25 N.m em 177 ms | Ts = 2 ms
+Kp_P = 0.3456 | PI: Kp = 0.1728 V/(rad/s), Ki = 7.817 V/rad
+ensaio          w_final [rad/s]   erro [%]  sobressinal [%]  ciclos sat.
+malha aberta             422.93      6.015             0.00            0
+P                        354.55     21.210             0.00           19
+PI                       449.99      0.002             1.89           24
+A malha aberta não sabe que a carga entrou. O P reage, mas guarda erro. O PI volta ao alvo.
