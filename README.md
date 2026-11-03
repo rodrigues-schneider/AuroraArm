@@ -1,5 +1,7 @@
 # AuroraArm — pacote da parte prática
 
+Repositório remoto: [github.com/rodrigues-schneider/AuroraArm](https://github.com/rodrigues-schneider/AuroraArm) (privado).
+
 Este repositório reúne o modelo, o controlador e as evidências práticas preparados para a junta do cotovelo do braço colaborativo AuroraArm. A organização acompanha as etapas das Unidades 1 a 4. Os arquivos foram escritos para que outra pessoa consiga entender o que foi feito e repetir os cálculos principais.
 
 ## O que o pacote contém
